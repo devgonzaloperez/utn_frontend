@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createHashRouter } from "react-router-dom";
 import { RequireAuth } from "../components/RequireAuth/RequireAuth";
 import { AdminPage } from "../pages/AdminPage/AdminPage";
 import { HomePage } from "../pages/HomePage/HomePage";
@@ -13,7 +13,7 @@ const ROLES = {
     admin: 5150
 };
 
-export const router = createBrowserRouter([
+export const router = createHashRouter([
     //Public Routes.
     {path: '/', element: <LandingPage/>},
     {path: '/register', element: <RegisterPage/>},
