@@ -6,13 +6,19 @@ const BASE_URL = 'https://utnbackend-production.up.railway.app';
 
 export const axiosPublicInstance = axios.create({
     baseURL: BASE_URL,
-    headers: {'Content-Type': 'application/json'},
+    headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+    },
     withCredentials: true
 });
 
 export const axiosPrivateInstance = axios.create({
     baseURL: BASE_URL,
-    headers: {'Content-Type': 'application/json'},
+    headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+    },
     withCredentials: true
 });
 
